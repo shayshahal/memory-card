@@ -54,6 +54,10 @@ export default function App() {
         :
           (champPull.length && <ManyGame champPull={champPull}/>)
       }
+      <footer>
+        <span>Shay Shahal</span>
+        <a href='https://github.com/shayshahal/memory-card' alt='my-github'><img alt='git'/></a>
+      </footer>
     </div>
   );
 }
