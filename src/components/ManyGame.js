@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import '../styles/ManyGame.css'
+import '../styles/Game.css';
 import Card from './Card';
 import Score from './Score';
+
 export default function ManyGame(props){
     const [currentChamps, setCurrentChamps] = useState(getRandomChamps())
     const [memory, setMemory] = useState(new Set());
@@ -33,8 +35,8 @@ export default function ManyGame(props){
         setCurrentChamps(getRandomChamps())
     }
     return (
-        <div className='ManyGame'>
-            <div className='Cards'>{
+        <div className='Game'>
+            <div className='ManyGame'>{
                 (currentChamps.map(champ=>{
                     return <Card 
                                 key={champ.key} 

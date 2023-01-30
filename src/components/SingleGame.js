@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import '../styles/SingleGame.css'
+import { useState } from 'react';
+import '../styles/SingleGame.css';
+import '../styles/Game.css';
 import Card from './Card';
 import Score from './Score';
 
@@ -7,6 +8,7 @@ export default function SingleGame(props){
     const [currentChamp, setCurrentChamp] = useState(getRandomChamp())
     const [memory, setMemory] = useState(new Set());
     const [score, setScore] = useState(0);
+    
     function getRandomChamp(){
         return props.champPull[~~(Math.random()*props.champPull.length)]
     }
@@ -26,11 +28,13 @@ export default function SingleGame(props){
         setCurrentChamp(getRandomChamp());
     }
     return (
-        <div className={'SingleGame'}>
-        <Card champ={currentChamp}/>
-        <button onClick={()=>{choiceHandler(true)}}>Seen</button>            
-        <button onClick={()=>{choiceHandler(false)}}>New</button>
-        <Score score={score}/>
+        <div className='Game'>
+            <div className={'SingleGame'}>
+                <Card champ={currentChamp}/>
+                <button onClick={()=>{choiceHandler(true)}}>Seen</button>            
+                <button onClick={()=>{choiceHandler(false)}}>New</button>
+            </div>
+            <Score score={score}/>
         </div>
     )
 }
