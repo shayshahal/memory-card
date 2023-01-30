@@ -1,0 +1,9 @@
+.App{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: .5em 1em;
+}

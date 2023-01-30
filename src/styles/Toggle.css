@@ -1,0 +1,30 @@
+.Toggle{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+    padding: .5em .5em;
+}
+.Toggle input{
+    appearance: none;
+    position: relative;
+    background-image: none;
+    background-color: white;
+    border: .1rem solid black;
+    border-radius: 1rem;
+    height: 2rem;
+    width: 4rem;
+}
+.Toggle input::before{
+    content: '';
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    border-radius: 1rem;
+    transition: all .2s ease;
+}
+.Toggle input:checked:before{
+    left:50%;
+}
