@@ -33,7 +33,7 @@ export default function ManyGame(props){
         setCurrentChamps(getRandomChamps())
     }
     return (
-        <div className={'ManyGame'}>
+        <div className='ManyGame'>
             <div className='Cards'>{
                 (currentChamps.map(champ=>{
                     return <Card 

@@ -8,7 +8,7 @@ function transformObject(obj, isHard = false){
   let res = [];
   for (let i = 0; i < (isHard?obj.skins.length:1); i++) {
     res.push({
-        name: obj.name,
+        name: obj.id,
         key: obj.key,
         title: obj.title,
         skin: obj.skins[i].num

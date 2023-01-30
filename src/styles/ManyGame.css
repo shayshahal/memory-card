@@ -1,0 +1,4 @@
+.ManyGame{
+    display: grid;
+    grid-template-columns: (6, 1fr);
+}
