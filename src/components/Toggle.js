@@ -1,12 +1,11 @@
 import '../styles/Toggle.css'
 
 export default function Toggle(props){
-
     return(
-        <label className='Toggle' htmlFor={props.id}>
+        <div className='Toggle'>
             {props.first}
-            <input type='checkbox' id={props.id} onChange={props.onChange} checked/>
+            <input type='checkbox' name={props.id} id={props.id} onChange={props.onChange}/>
             {props.second}
-        </label>
+        </div>
     );
 }

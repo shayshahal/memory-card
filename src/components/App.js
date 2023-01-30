@@ -3,15 +3,18 @@ import '../styles/App.css';
 import Settings from './Settings';
 
 export default function App() {
-  const [isManyGame, setIsManyGame] = useState(true);
-  const [isDifficultEasy, setIsDifficultyEasy] = useState(true);
+  const [isSingleGame, setIsSingleGame] = useState(false);
+  const [isDifficultyHard, setIsDifficultyHard] = useState(false);
 
   return (
     <div className="App"> 
-    <Settings 
-      setIsGame={()=>{setIsManyGame(!isManyGame)}}
-      setIsDifficulty={()=>{setIsDifficultyEasy(!isDifficultEasy)}}
-    />
+      <header>
+        <img alt='logo'/>
+        <Settings 
+          setIsGame={()=>{setIsSingleGame(!isSingleGame)}}
+          setIsDifficulty={()=>{setIsDifficultyHard(!isDifficultyHard)}}
+        />
+      </header>
     </div>
   );
 }
