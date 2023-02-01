@@ -1,0 +1,12 @@
+.Card{
+    background-color: transparent;
+    border: none;
+}
+.Card > img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.cardName{
+    font-size: 1rem;
+}
