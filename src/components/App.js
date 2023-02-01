@@ -4,9 +4,9 @@ import ManyGame from './ManyGame';
 import Settings from './Settings';
 import SingleGame from './SingleGame';
 
-function transformObject(obj, isHard){
+function transformObject(obj, isEasy){
   let res = [];
-  for (let i = 0; i < (isHard?obj.skins.length:1); i++) {
+  for (let i = 0; i < (isEasy?1:obj.skins.length); i++) {
     res.push({
         name: obj.id,
         key: obj.key,
@@ -20,7 +20,7 @@ function transformObject(obj, isHard){
 export default function App() {
   const [isSingleGame, setIsSingleGame] = useState(false);
   const [champPull, setChampPull] = useState([]);
-  const [isDifficultyHard, setIsDifficultyHard] = useState(false)
+  const [isDifficultyEasy, setIsDifficultyEasy] = useState(false)
   useEffect(() => {
     const controller = new AbortController();
     async function fetchChamps(){
@@ -28,7 +28,7 @@ export default function App() {
       const data = await response.json();
       let res = [];
       for(const v of Object.values(data.data)){
-        res = [...res, ...transformObject(v, isDifficultyHard)]
+        res = [...res, ...transformObject(v, isDifficultyEasy)]
       }
       setChampPull(res);
     }
@@ -36,7 +36,7 @@ export default function App() {
     return () => {
       controller.abort();
     }
-  },[isDifficultyHard])
+  },[isDifficultyEasy])
   
   return (
     <div className="App"> 
@@ -44,7 +44,7 @@ export default function App() {
         <span className='logo'/>
         <Settings 
           setIsGame={()=>{setIsSingleGame(!isSingleGame)}}
-          setIsDifficulty={()=>{setIsDifficultyHard(!isDifficultyHard)}}
+          setIsDifficulty={()=>{setIsDifficultyEasy(!isDifficultyEasy)}}
         />
       </header>
       {isSingleGame 
