@@ -1,9 +1,41 @@
 .App{
     display: grid;
     grid-template-rows: auto 1fr auto;
+    align-items: stretch;
+    min-height: 100vh;
+    background-image: url('../assets/bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: .5em 1em;
+    background-color: #0A1428;
+}
+.logo{
+    background-image: url('../assets/logo.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 7rem;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .25em .5em;
+    color: #C89B3C;
+}
+.githubLogo{
+    background-image: url('../assets/github.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 7rem;
+    background-color: rgb(168, 158, 158);
 }
