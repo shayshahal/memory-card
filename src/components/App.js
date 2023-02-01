@@ -32,7 +32,7 @@ export default function App() {
       }
       setChampPull(res);
     }
-    fetchChamps();
+    fetchChamps().catch(()=>console.log('Canceled fetch!'));
     return () => {
       controller.abort();
     }
