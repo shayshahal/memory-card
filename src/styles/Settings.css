@@ -9,10 +9,15 @@
     background-size: cover;
     height: 2.5rem;
     aspect-ratio: 1/1;
+    transition: transform .2s ease;
+}
+.Settings input:checked{
+    transform: rotate(0.25turn);
 }
 .expandedSettings{
     position: absolute;
     right: 0;
+    margin-block: .5em;
     padding: .5em .5em;
     border: .5rem solid black;
     background-color: #0A1428;
