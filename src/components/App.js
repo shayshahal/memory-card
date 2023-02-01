@@ -4,7 +4,7 @@ import ManyGame from './ManyGame';
 import Settings from './Settings';
 import SingleGame from './SingleGame';
 
-function transformObject(obj, isHard = false){
+function transformObject(obj, isHard){
   let res = [];
   for (let i = 0; i < (isHard?obj.skins.length:1); i++) {
     res.push({
@@ -28,7 +28,7 @@ export default function App() {
       const data = await response.json();
       let res = [];
       for(const v of Object.values(data.data)){
-        res = [...res, ...transformObject(v)]
+        res = [...res, ...transformObject(v, isDifficultyHard)]
       }
       setChampPull(res);
     }
@@ -36,7 +36,7 @@ export default function App() {
     return () => {
       controller.abort();
     }
-  },[])
+  },[isDifficultyHard])
   
   return (
     <div className="App"> 
