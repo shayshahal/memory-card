@@ -1,7 +1,7 @@
 .Settings{
     position: relative;
 }
-.Settings input{
+.settingsToggle{
     appearance: none;
     cursor: pointer;
     background-image: url('../assets/settings.png');
@@ -11,15 +11,18 @@
     aspect-ratio: 1/1;
     transition: transform .2s ease;
 }
-.Settings input:checked{
+.settingsToggle:checked{
     transform: rotate(0.25turn);
 }
 .expandedSettings{
     position: absolute;
-    right: 0;
-    margin-block: .5em;
+    right: -1em;
+    margin-top: .5em;
+    display: flex;
     padding: .5em .5em;
-    border: .5rem solid black;
-    background-color: #0A1428;
-    color: white;
+    border: .1rem solid #463714;
+    border-top: none;
+    border-bottom-left-radius: 2rem;
+    background-color: #010A13;
+    color: #C89B3C;
 }

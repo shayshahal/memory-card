@@ -10,7 +10,7 @@ export default function Settings(props){
 
     return (
         <div className='Settings'>
-            <input onChange={changeHandler} id='settings-toggle' type='checkbox'/>
+            <input onChange={changeHandler} className='settingsToggle' type='checkbox'/>
             {isSettingsOpen && 
                 <div className='expandedSettings'>
                     <GameToggle onChange={props.setIsGame}/>

@@ -13,7 +13,8 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: .5em 1em;
-    background-color: #0A1428;
+    background-color: #010A13;
+    border-bottom: .1rem solid #463714;
 }
 .logo{
     background-image: url('../assets/logo.png');
@@ -36,6 +37,9 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    width: 7rem;
-    background-color: rgb(168, 158, 158);
+    width: 5rem;
+    transition: transform .2s ease;
+}
+.githubLogo:hover{
+    transform: scale(1.1);
 }
