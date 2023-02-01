@@ -21,8 +21,10 @@ export default function App() {
   const [isSingleGame, setIsSingleGame] = useState(false);
   const [champPull, setChampPull] = useState([]);
   const [isDifficultyEasy, setIsDifficultyEasy] = useState(false)
+
   useEffect(() => {
     const controller = new AbortController();
+    
     async function fetchChamps(){
       const response = await fetch('https://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/championFull.json', {signal: controller.signal});
       const data = await response.json();
@@ -32,7 +34,9 @@ export default function App() {
       }
       setChampPull(res);
     }
+
     fetchChamps().catch(()=>console.log('Canceled fetch!'));
+
     return () => {
       controller.abort();
     }

@@ -7,7 +7,6 @@ export default function Settings(props){
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
     const changeHandler = () => setIsSettingsOpen(!isSettingsOpen);
 
-
     return (
         <div className='Settings'>
             <input onChange={changeHandler} className='settingsToggle' type='checkbox'/>

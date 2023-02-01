@@ -8,7 +8,8 @@ export default function ManyGame(props){
     const [currentChamps, setCurrentChamps] = useState(getRandomChamps())
     const [memory, setMemory] = useState(new Set());
     const [score, setScore] = useState(0);
-    function getRandomChamps(n = 12){
+
+    function getRandomChamps(n = 12){ // get 12 unique items from the champion pull - found algo on StackOverflow
         let result = new Array(n),
         len = props.champPull.length,
         taken = new Array(len);
@@ -19,6 +20,7 @@ export default function ManyGame(props){
         }
         return result;
     }
+
     function lose(){
         setScore(0);
         setMemory(new Set());
@@ -34,6 +36,7 @@ export default function ManyGame(props){
             win(e.target.alt);
         setCurrentChamps(getRandomChamps())
     }
+
     return (
         <div className='Game'>
             <div className='ManyGame'>{

@@ -6,12 +6,13 @@ import Score from './Score';
 
 export default function SingleGame(props){
     const [currentChamp, setCurrentChamp] = useState(getRandomChamp())
-    const [memory, setMemory] = useState(new Set());
-    const [score, setScore] = useState(0);
-    
     function getRandomChamp(){
         return props.champPull[~~(Math.random()*props.champPull.length)];
     }
+
+    const [score, setScore] = useState(0);
+    const [memory, setMemory] = useState(new Set());
+    
     function lose(){
         setScore(0);
         setMemory(new Set());
@@ -27,6 +28,7 @@ export default function SingleGame(props){
             lose();
         setCurrentChamp(getRandomChamp());
     }
+
     return (
         <div className='Game'>
             <div className={'SingleGame'}>
