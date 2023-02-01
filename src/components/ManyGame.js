@@ -41,9 +41,8 @@ export default function ManyGame(props){
         <div className='Game'>
             <div className='ManyGame'>{
                 (currentChamps.map(champ=>{
-                    console.log(champ.key)
                     return <Card
-                                key={champ.key+champ.skin} 
+                                key={champ.key} 
                                 champ={champ} 
                                 onClick={choiceHandler}
                             />

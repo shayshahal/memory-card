@@ -9,7 +9,7 @@ function transformObject(obj, isEasy){
   for (let i = 0; i < (isEasy?1:obj.skins.length); i++) {
     res.push({
         name: obj.id,
-        key: obj.key,
+        key: obj.skins[i].id,
         skin: obj.skins[i].num
       }
     )
@@ -24,7 +24,7 @@ export default function App() {
 
   useEffect(() => {
     const controller = new AbortController();
-    
+
     async function fetchChamps(){
       const response = await fetch('https://ddragon.leagueoflegends.com/cdn/13.1.1/data/en_US/championFull.json', {signal: controller.signal});
       const data = await response.json();
