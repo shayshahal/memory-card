@@ -59,7 +59,7 @@ export default function App() {
           <div>Couldn't fetch</div>
       }
       <footer>
-        <span>©Shay Shahal</span>
+        <span>© Shay Shahal</span>
         <a className='githubLogo' href='https://github.com/shayshahal/memory-card' alt='my-github'> </a>
       </footer>
     </div>
