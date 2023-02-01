@@ -1,14 +1,12 @@
 .Toggle{
     display: flex;
-    position: relative;
     align-items: center;
-    justify-content: flex-start;
+    gap: .5em;
     padding: .5em .5em;
 }
 .Toggle input{
     appearance: none;
     position: relative;
-    background-image: none;
     background-color: #1E282D;
     border: .1rem solid #463714;
     border-radius: 1rem;

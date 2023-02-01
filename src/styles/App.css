@@ -1,17 +1,14 @@
 .App{
     display: grid;
     grid-template-rows: auto 1fr auto;
-    align-items: stretch;
     min-height: 100vh;
     background-image: url('../assets/bg.jpg');
     background-position: center center;
-    background-repeat: no-repeat;
     background-size: cover;
 }
 header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: .5em 1em;
     background-color: #010A13;
     border-bottom: .1rem solid #463714;
@@ -19,9 +16,7 @@ header{
 .logo{
     background-image: url('../assets/logo.png');
     background-position: center center;
-    background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
     width: 7rem;
 }
 footer{
