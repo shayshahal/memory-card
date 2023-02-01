@@ -5,10 +5,9 @@
     appearance: none;
     cursor: pointer;
     background-image: url('../assets/settings.png');
-    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 3rem;
+    height: 2.5rem;
     aspect-ratio: 1/1;
 }
 .expandedSettings{
@@ -16,4 +15,6 @@
     right: 0;
     padding: .5em .5em;
     border: .5rem solid black;
+    background-color: #0A1428;
+    color: white;
 }
