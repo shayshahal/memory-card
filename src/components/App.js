@@ -47,11 +47,16 @@ export default function App() {
           setIsDifficulty={()=>{setIsDifficultyEasy(!isDifficultyEasy)}}
         />
       </header>
-      {isSingleGame 
+      {
+        champPull.length 
         ?
-          (champPull.length && <SingleGame champPull={champPull}/>)
+          (isSingleGame
+          ?
+            <SingleGame champPull={champPull}/>
+          :
+            <ManyGame champPull={champPull}/>)
         :
-          (champPull.length && <ManyGame champPull={champPull}/>)
+          <div>Couldn't fetch</div>
       }
       <footer>
         <span>©Shay Shahal</span>

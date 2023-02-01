@@ -26,7 +26,6 @@ export default function ManyGame(props){
     function win(name){
         setScore(prev=>prev+1);
         setMemory(new Set(memory.add(name)))
-        console.log(memory)
     }
     function choiceHandler(e){
         if(memory.has(e.target.alt))
@@ -40,7 +39,7 @@ export default function ManyGame(props){
             <div className='ManyGame'>{
                 (currentChamps.map(champ=>{
                     console.log(champ.key)
-                    return <Card 
+                    return <Card
                                 key={champ.key+champ.skin} 
                                 champ={champ} 
                                 onClick={choiceHandler}

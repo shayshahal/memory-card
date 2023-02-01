@@ -1,0 +1,23 @@
+.SingleGame{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50vh auto;
+    justify-self: center;
+    gap: 1em;
+}
+.SingleGame .Card{
+    grid-column: span 2;
+}
+.Choice{
+    background-color: #010A13;
+    color: #C89B3C;
+    border: .3rem solid #463714;
+    border-radius: .3rem;
+    padding: .5em 2em;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform .2s ease;
+}
+.Choice:hover{
+    transform: scale(1.1);
+}

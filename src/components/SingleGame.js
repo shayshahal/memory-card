@@ -10,7 +10,7 @@ export default function SingleGame(props){
     const [score, setScore] = useState(0);
     
     function getRandomChamp(){
-        return props.champPull[~~(Math.random()*props.champPull.length)]
+        return props.champPull[~~(Math.random()*props.champPull.length)];
     }
     function lose(){
         setScore(0);
@@ -18,10 +18,10 @@ export default function SingleGame(props){
     }
     function win(){
         setScore(prev=>prev+1);
-        setMemory(prev=>prev.add(currentChamp))
+        setMemory(new Set(memory.add(currentChamp.name)))
     }
     function choiceHandler(isSeen){
-        if(isSeen === memory.has(currentChamp))
+        if(isSeen === memory.has(currentChamp.name))
             win();
         else
             lose();
@@ -31,8 +31,8 @@ export default function SingleGame(props){
         <div className='Game'>
             <div className={'SingleGame'}>
                 <Card champ={currentChamp}/>
-                <button onClick={()=>{choiceHandler(true)}}>Seen</button>            
-                <button onClick={()=>{choiceHandler(false)}}>New</button>
+                <button className='Choice' onClick={()=>{choiceHandler(true)}}>Seen</button>            
+                <button className='Choice' onClick={()=>{choiceHandler(false)}}>New</button>
             </div>
             <Score score={score}/>
         </div>
