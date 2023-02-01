@@ -25,13 +25,14 @@ export default function ManyGame(props){
     }
     function win(name){
         setScore(prev=>prev+1);
-        setMemory(prev=>prev.add(name))
+        setMemory(new Set(memory.add(name)))
+        console.log(memory)
     }
-    function choiceHandler(name){
-        if(memory.has(name))
+    function choiceHandler(e){
+        if(memory.has(e.target.alt))
             lose();
         else
-            win();
+            win(e.target.alt);
         setCurrentChamps(getRandomChamps())
     }
     return (
