@@ -10,7 +10,6 @@ function transformObject(obj, isHard = false){
     res.push({
         name: obj.id,
         key: obj.key,
-        title: obj.title,
         skin: obj.skins[i].num
       }
     )
@@ -42,7 +41,7 @@ export default function App() {
   return (
     <div className="App"> 
       <header>
-        <img alt='logo'/>
+        <span className='logo'/>
         <Settings 
           setIsGame={()=>{setIsSingleGame(!isSingleGame)}}
           setIsDifficulty={()=>{setIsDifficultyHard(!isDifficultyHard)}}
@@ -55,8 +54,8 @@ export default function App() {
           (champPull.length && <ManyGame champPull={champPull}/>)
       }
       <footer>
-        <span>Shay Shahal</span>
-        <a href='https://github.com/shayshahal/memory-card' alt='my-github'><img alt='git'/></a>
+        <span>©Shay Shahal</span>
+        <a className='githubLogo' href='https://github.com/shayshahal/memory-card' alt='my-github'> </a>
       </footer>
     </div>
   );
