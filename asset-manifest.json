@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.da424bfe.css",
+    "main.js": "/memory-card/static/js/main.021b61f2.js",
+    "static/media/bg.jpg": "/memory-card/static/media/bg.55e0699d585c48b9f1ee.jpg",
+    "static/media/BeaufortforLOL-Bold.otf": "/memory-card/static/media/BeaufortforLOL-Bold.cd9feab2438eb68ecd1d.otf",
+    "static/media/settings.png": "/memory-card/static/media/settings.8248f8d4aed61fbde604.png",
+    "static/media/github.png": "/memory-card/static/media/github.ad22d33059b5c251882e.png",
+    "static/media/logo.png": "/memory-card/static/media/logo.4ddef4447b7159f051af.png",
+    "index.html": "/memory-card/index.html",
+    "main.da424bfe.css.map": "/memory-card/static/css/main.da424bfe.css.map",
+    "main.021b61f2.js.map": "/memory-card/static/js/main.021b61f2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da424bfe.css",
+    "static/js/main.021b61f2.js"
+  ]
+}
