@@ -64,7 +64,7 @@ export default function App() {
       }
       <footer>
         <span>© Shay Shahal</span>
-        <a className='githubLogo' href='https://github.com/shayshahal/memory-card' alt='my-github'> </a>
+        <a className='githubLogo' href='https://github.com/shayshahal/memory-card' alt='my-github' target='_blank' rel='noreferrer'> </a>
       </footer>
     </div>
   );
