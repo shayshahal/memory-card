@@ -8,3 +8,8 @@
   box-sizing: border-box;
   font-family: 'beaufortforLOL';
 }
+@media (max-width:800px) {
+  *{
+      font-size: 13px;
+  }
+}
