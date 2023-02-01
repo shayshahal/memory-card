@@ -8,8 +8,8 @@ export default function Score(props){
 
     return (
         <div className='Score'>
-            <span>Score: {props.score}</span>
-            <span>Best: {best}</span>
+            <div>Score: {props.score}</div>
+            <div>Best: {best}</div>
         </div>
     )
 }
